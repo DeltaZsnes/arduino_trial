@@ -23,7 +23,14 @@ https://github.com/arduino/arduino-cli
 
 Arduino Uno	16Mhz ATmega328	2KB SRAM, 32KB flash	14	6 input, 0 output
 
-LED RGB solder and connect
+# Solder Technic
+ - Heat the plate
+ - Place the wire on the plate
+ - Place the solder iron on the plate
+ - Good luck
+
+ADRESSABLE LED RGB solder and connect
+NeoPixel RING RGB LED LUXOR PARTS from Kjell och Company
     GND to GND
     DOUT to GND
     5V to 5V
