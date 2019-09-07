@@ -23,9 +23,25 @@ https://github.com/arduino/arduino-cli
 
 Arduino Uno	16Mhz ATmega328	2KB SRAM, 32KB flash	14	6 input, 0 output
 
+LED RGB solder and connect
+    GND to GND
+    DOUT to GND
+    5V to 5V
+
+    GND to GND
+    DIN to Port2
+    5V to 5V
+
+    Use a resistor between PORT2 -> DIN for a more even signal
+
+
+# Commands
 arduino-cli compile --fqbn arduino:avr:uno MySketch
 sudo env "PATH=$PATH" arduino-cli compile --fqbn arduino:avr:uno sketch/blink/blink.sketch.ino
 
 sudo env "PATH=$PATH" arduino-cli compile --fqbn arduino:avr:uno rgb
 
 sudo env "PATH=$PATH" arduino-cli upload -p /dev/ttyACM1 --fqbn arduino:avr:uno rgb/
+
+sudo env "PATH=$PATH" arduino-cli compile --fqbn arduino:avr:uno sketch/argb
+sudo env "PATH=$PATH" arduino-cli upload -p /dev/ttyACM1 --fqbn arduino:avr:uno sketch/argb

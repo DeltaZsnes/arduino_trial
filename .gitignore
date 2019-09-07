@@ -1,1 +1,4 @@
 junk
+*.elf
+*.hex
+
