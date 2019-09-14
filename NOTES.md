@@ -43,6 +43,7 @@ NeoPixel RING RGB LED LUXOR PARTS from Kjell och Company
 
 
 # Commands
+arduino-cli board list
 arduino-cli compile --fqbn arduino:avr:uno MySketch
 sudo env "PATH=$PATH" arduino-cli compile --fqbn arduino:avr:uno sketch/blink/blink.sketch.ino
 
@@ -52,3 +53,9 @@ sudo env "PATH=$PATH" arduino-cli upload -p /dev/ttyACM1 --fqbn arduino:avr:uno 
 
 sudo env "PATH=$PATH" arduino-cli compile --fqbn arduino:avr:uno sketch/argb
 sudo env "PATH=$PATH" arduino-cli upload -p /dev/ttyACM1 --fqbn arduino:avr:uno sketch/argb
+
+arduino-cli lib search neopixel
+arduino-cli board listall
+arduino-cli core search nano
+arduino-cli core list
+sudo env "PATH=$PATH" arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:nano sketch/blink
